@@ -101,9 +101,9 @@ function mostrarAlerta(mensaje, error = null) {
   alerta.textContent = mensaje;
 
   if(error) {
-    alerta.classList.add('error');
+    alerta.classList('error');
   } else{
-    alerta.classList.add('enviado');
+    alerta.classList('enviado');
   }
 
   formulario.appendChild(alerta);

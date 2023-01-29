@@ -90,26 +90,42 @@ formulario.addEventListener('submit', function(e) {
     mostrarAlerta('* Su mensaje ha sido enviado correctamente');
   }
  
-  // Enviar el formulario
+  //Enviar el formulario
 
   console.log('Enviando formulario...');
 });
 
-// Mostrar alerta
+//Mostrar alerta
 function mostrarAlerta(mensaje, error = null) {
   const alerta = document.createElement('P');
   alerta.textContent = mensaje;
 
   if(error) {
-    alerta.classList.add('error');
+    alerta.classList('error');
   } else{
-    alerta.classList.add('enviado');
+    alerta.classList('enviado');
   }
+}
 
-  formulario.appendChild(alerta);
+// Mostrar error por pantalla
+function mostrarError(mensaje) {
+  error.classList.add('error');
 
-  // Desaparezca después de 2 segundos
+  formulario.appendChild(error);
+
+  // Desaparecer mensaje de error 
   setTimeout(() => {
-    alerta.remove();
+    error.remove();
+  }, 2000);
+}
+
+function mostrarValidacion(mensaje) {
+  enviado.classList.add('enviado');
+
+  formulario.appendChild(enviado);
+
+  // Desaparecer mensaje de validacion
+  setTimeout(() => {
+    enviado.remove();
   }, 2000);
 }
