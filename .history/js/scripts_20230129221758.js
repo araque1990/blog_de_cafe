@@ -106,7 +106,7 @@ function mostrarError(mensaje) {
   // Desaparecer mensaje de error 
   setTimeout(() => {
     error.remove();
-  }, 2000);
+  }, 3000);
 }
 
 function mostrarValidacion(mensaje) {
@@ -119,5 +119,5 @@ function mostrarValidacion(mensaje) {
   // Desaparecer mensaje de error 
   setTimeout(() => {
     enviado.remove();
-  }, 2000);
+  }, 3000);
 }

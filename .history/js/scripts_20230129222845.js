@@ -110,14 +110,15 @@ function mostrarError(mensaje) {
 }
 
 function mostrarValidacion(mensaje) {
-  const enviado = document.createElement('P');
-  enviado.textContent = mensaje;
-  enviado.classList.add('enviado');
+  // const enviado = document.createElement('P');
+  // enviado.textContent = mensaje;
+  // enviado.classList.add('enviado');
 
-  formulario.appendChild(enviado);
+  // formulario.appendChild(enviado);
 
-  // Desaparecer mensaje de error 
-  setTimeout(() => {
-    enviado.remove();
-  }, 2000);
+  // // Desaparecer mensaje de error 
+  // setTimeout(() => {
+  //   enviado.remove();
+  // }, 2000);
+  alert(mensaje)
 }

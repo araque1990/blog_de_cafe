@@ -85,9 +85,9 @@ formulario.addEventListener('submit', function(e) {
   const { nombre, email, mensaje } =  datos;
   if(nombre === '' || email === '' || mensaje === '') { // La validacion principal la hemos hecho en el HTML con el required, este es solo un ejemplo para ver como se hace con JS
     mostrarError('* Todos los campos son obligatorios');
-    return;
   }else {
-    mostrarValidacion('* Su mensaje ha sido enviado correctamente');
+    alert('Mensaje enviado correctamente')
+    //mostrarValidacion('* Su mensaje ha sido enviado correctamente');
   }
  
   //Enviar el formulario
@@ -109,7 +109,7 @@ function mostrarError(mensaje) {
   }, 2000);
 }
 
-function mostrarValidacion(mensaje) {
+/*function mostrarValidacion(mensaje) {
   const enviado = document.createElement('P');
   enviado.textContent = mensaje;
   enviado.classList.add('enviado');
@@ -120,4 +120,4 @@ function mostrarValidacion(mensaje) {
   setTimeout(() => {
     enviado.remove();
   }, 2000);
-}
+}*/
